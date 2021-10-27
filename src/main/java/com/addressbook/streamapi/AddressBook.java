@@ -59,7 +59,6 @@ public class AddressBook {
     public static List<Contacts> sortByZip(Function<? super Contacts, ? extends Long> key) {
         return contactList.stream().sorted(Comparator.comparing(key)).collect(Collectors.toList());
     }
-
     // method for edit contact
     public boolean editContact(Contacts current, Contacts edit) {
         if (!contactList.contains(current))
